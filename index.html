@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV - Agata Wankiewicz</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            background-color: #0e0e0e;
+            color: #e5e5e5;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.95rem;
+            line-height: 1.6;
+            max-width: 740px;
+            margin: 0 auto;
+            padding: 32px 24px;
+        }
+        header {
+            margin-bottom: 24px;
+        }
+        h1 {
+            font-size: 2rem;
+            font-weight: 600;
+            letter-spacing: -0.02em;
+            margin-bottom: 4px;
+        }
+        nav {
+            display: flex;
+            gap: 4px;
+            margin-bottom: 28px;
+            border-bottom: 1px solid #222;
+            padding-bottom: 0;
+        }
+        nav a {
+            color: #666;
+            text-decoration: none;
+            font-size: 0.82rem;
+            font-weight: 500;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            padding: 8px 14px;
+            border-bottom: 2px solid transparent;
+            margin-bottom: -1px;
+            transition: color 0.15s;
+        }
+        nav a:hover {
+            color: #ccc;
+        }
+        nav a.active {
+            color: #60a5fa;
+            border-bottom-color: #60a5fa;
+        }
+        section {
+            display: none;
+        }
+        section.active {
+            display: block;
+        }
+        h2 {
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: #60a5fa;
+            margin-bottom: 16px;
+        }
+        p {
+            color: #bbb;
+            margin-bottom: 16px;
+        }
+        .job {
+            margin-bottom: 20px;
+        }
+        .job-title {
+            font-weight: 500;
+            color: #e5e5e5;
+        }
+        .job-period {
+            color: #666;
+            font-size: 0.82rem;
+            margin-bottom: 8px;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        ul li {
+            color: #bbb;
+            padding: 3px 0;
+            padding-left: 16px;
+            position: relative;
+        }
+        ul li::before {
+            content: '–';
+            position: absolute;
+            left: 0;
+            color: #444;
+        }
+        .skills-group {
+            margin-bottom: 16px;
+        }
+        .skills-label {
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: #555;
+            margin-bottom: 4px;
+        }
+        .skills-group div:last-child {
+            color: #bbb;
+        }
+        #contact a {
+            color: #60a5fa;
+            text-decoration: none;
+        }
+        #contact a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Agata Wankiewicz</h1>
+    </header>
+
+    <nav>
+        <a href="#about" onclick="showSection('about', this)">About me</a>
+        <a href="#experience" onclick="showSection('experience', this)">Experience</a>
+        <a href="#education" onclick="showSection('education', this)">Education</a>
+        <a href="#skills" onclick="showSection('skills', this)">Skills</a>
+        <a href="#languages" onclick="showSection('languages', this)">Languages</a>
+        <a href="#contact" onclick="showSection('contact', this)">Contact</a>
+    </nav>
+
+    <section id="about">
+        <h2>About me</h2>
+        <p>Experienced software engineer with 5 years of experience in developing applications using Java technology. Specializing in backend application development, with particular emphasis on implementing business logic and database integration. I also possess competencies in finance and accounting, which allows me to better understand business needs and implement solutions more effectively.</p>
+    </section>
+
+    <section id="experience">
+        <h2>Experience</h2>
+
+        <div class="job">
+            <div class="job-title">Software Engineer — Capgemini</div>
+            <div class="job-period">January 2022 – present</div>
+            <ul>
+                <li>Development and maintenance of applications in Java technology using the Quarkus framework</li>
+                <li>Design and implementation of REST APIs according to best practices</li>
+                <li>Process modeling using JBPM technology</li>
+                <li>Development of web applications in Java technology using JSF</li>
+                <li>Implementation of unit and integration tests (JUnit, Mockito, Wiremock)</li>
+                <li>Working in Agile methodology, active participation in code review and sprint planning</li>
+                <li>Collaboration with international teams</li>
+            </ul>
+        </div>
+
+        <div class="job">
+            <div class="job-title">Junior Software Engineer — Capgemini</div>
+            <div class="job-period">March 2021 – December 2021</div>
+            <ul>
+                <li>Implementation of frontend functionalities using Angular and PrimeNG</li>
+                <li>Creating and optimizing SQL queries</li>
+                <li>Technical documentation in Confluence</li>
+            </ul>
+        </div>
+
+        <div class="job">
+            <div class="job-title">Database Administrator (internship) — Grant Thornton</div>
+            <div class="job-period">January 2021 – February 2021</div>
+            <ul>
+                <li>Management of PostgreSQL and MySQL databases</li>
+                <li>Creating and optimizing SQL queries</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="education">
+        <h2>Education</h2>
+        <div class="job">
+            <div class="job-title">Poznań University of Economics</div>
+            <ul>
+                <li>Master's degree in Computer Science and Econometrics (spec. Financial Engineering), 2019–2021</li>
+                <li>Bachelor's degree in Computer Science and Econometrics (spec. IT in Business), 2017–2020</li>
+                <li>Bachelor's degree in Finance and Accounting (spec. Finance, Audit and Taxes), 2016–2019</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="skills">
+        <h2>Skills</h2>
+        <div class="skills-group">
+            <div class="skills-label">Backend</div>
+            <div>Java 11/17, REST API, JPA/Hibernate, JBPM, Quarkus, Spring</div>
+        </div>
+        <div class="skills-group">
+            <div class="skills-label">Databases</div>
+            <div>PostgreSQL, MySQL</div>
+        </div>
+        <div class="skills-group">
+            <div class="skills-label">Testing</div>
+            <div>JUnit, Mockito, Wiremock, TDD</div>
+        </div>
+        <div class="skills-group">
+            <div class="skills-label">Frontend</div>
+            <div>Angular (basic), HTML/CSS, PrimeNG, JSF</div>
+        </div>
+        <div class="skills-group">
+            <div class="skills-label">Other tools</div>
+            <div>Git, Maven, Docker, Jira, Confluence, Postman, Swagger/OpenAPI, AWS</div>
+        </div>
+    </section>
+
+    <section id="languages">
+        <h2>Languages</h2>
+        <ul>
+            <li>English – B2</li>
+            <li>Ukrainian – B2</li>
+            <li>German – A2</li>
+        </ul>
+    </section>
+
+    <section id="contact">
+        <h2>Contact</h2>
+        <p><a href="mailto:agata.wankiewicz97@gmail.com">agata.wankiewicz97@gmail.com</a></p>
+        <p>506 958 648</p>
+    </section>
+
+    <script>
+        function showSection(id, link) {
+            document.querySelectorAll('section').forEach(s => s.classList.remove('active'));
+            document.querySelectorAll('nav a').forEach(a => a.classList.remove('active'));
+            document.getElementById(id).classList.add('active');
+            link.classList.add('active');
+        }
+
+        showSection('about', document.querySelector('nav a'));
+    </script>
+
+</body>
+</html>
