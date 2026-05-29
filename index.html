@@ -7,55 +7,73 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
     <style>
+        :root {
+            --bg:        #ffffff;
+            --primary:   #111111;
+            --secondary: #555555;
+            --muted:     #999999;
+            --border:    #e5e5e5;
+            --accent:    #2563eb;
+        }
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg:        #0e0e0e;
+                --primary:   #e5e5e5;
+                --secondary: #aaaaaa;
+                --muted:     #555555;
+                --border:    #222222;
+                --accent:    #60a5fa;
+            }
+        }
         * {
             box-sizing: border-box;
             margin: 0;
             padding: 0;
         }
-        body {
-            background-color: #0e0e0e;
-            color: #e5e5e5;
-            font-family: 'Outfit', sans-serif;
-            font-size: 1.05rem;
-            line-height: 1.6;
-            max-width: 740px;
-            margin: 0 auto;
-            padding: 32px 24px;
+        html {
+            background-color: var(--bg);
         }
-        header {
-            margin-bottom: 24px;
+        body {
+            background-color: var(--bg);
+            color: var(--primary);
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.4rem;
+            line-height: 1.6;
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 60px 48px;
         }
         h1 {
-            font-size: 2rem;
+            font-size: 3rem;
             font-weight: 600;
             letter-spacing: -0.02em;
             margin-bottom: 4px;
         }
         nav {
             display: flex;
-            gap: 4px;
             margin-bottom: 28px;
-            border-bottom: 1px solid #222;
-            padding-bottom: 0;
+            border-bottom: 1px solid var(--border);
         }
         nav a {
-            color: #666;
+            flex: 1;
+            text-align: center;
+            color: var(--muted);
             text-decoration: none;
-            font-size: 0.82rem;
+            font-size: 1rem;
             font-weight: 500;
             letter-spacing: 0.04em;
             text-transform: uppercase;
-            padding: 8px 14px;
+            padding: 12px 0;
             border-bottom: 2px solid transparent;
             margin-bottom: -1px;
             transition: color 0.15s;
         }
         nav a:hover {
-            color: #ccc;
+            color: var(--secondary);
         }
         nav a.active {
-            color: #60a5fa;
-            border-bottom-color: #60a5fa;
+            color: var(--accent);
+            border-bottom-color: var(--accent);
         }
         section {
             display: none;
@@ -64,13 +82,12 @@
             display: block;
             padding-top: 24px;
         }
-        /* color scale: primary #e5e5e5 | secondary #aaa | muted #555 */
         ul {
             list-style: none;
             padding: 0;
         }
         ul li {
-            color: #aaa;
+            color: var(--secondary);
             padding: 3px 0;
             padding-left: 16px;
             position: relative;
@@ -79,42 +96,42 @@
             content: '–';
             position: absolute;
             left: 0;
-            color: #555;
+            color: var(--muted);
         }
         .skills-group {
             margin-bottom: 16px;
         }
         .skills-label {
-            font-size: 0.75rem;
+            font-size: 0.95rem;
             font-weight: 600;
             text-transform: uppercase;
             letter-spacing: 0.08em;
-            color: #555;
+            color: var(--muted);
             margin-bottom: 4px;
         }
         .skills-group .skills-value {
-            color: #aaa;
+            color: var(--secondary);
         }
         .edu-university {
-            color: #e5e5e5;
+            color: var(--primary);
             font-weight: 500;
             margin-bottom: 16px;
         }
         #experience .skills-label {
-            color: #aaa;
+            color: var(--secondary);
         }
         #experience .skills-value {
-            color: #555;
+            color: var(--muted);
         }
         #contact a {
-            color: #aaa;
+            color: var(--secondary);
             text-decoration: underline;
-            text-decoration-color: #60a5fa;
+            text-decoration-color: var(--accent);
             text-decoration-thickness: 1px;
             text-underline-offset: 3px;
         }
         #contact a:hover {
-            color: #e5e5e5;
+            color: var(--primary);
         }
     </style>
 </head>
